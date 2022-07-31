@@ -18,7 +18,7 @@ switch ($lang){
 echo $controler->Header();
 do{
     $code = $controler->GetCode();
-    echo $controler->SearchCode($code);
+    echo $controler->SearchAndShowCode($code);
     $another = $controler->AskToAnotherCode();
 }while($another == true);
 

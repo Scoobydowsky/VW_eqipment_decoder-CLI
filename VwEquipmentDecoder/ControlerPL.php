@@ -29,20 +29,17 @@ class ControlerPL implements ControlerInterface
         return readline("Podaj Kod wyposazenia: ");
     }
 
-    public function SearchCode(string $Code):string
+    public function SearchAndShowCode(string $Code):string
     {
         echo "KOD - OPIS".PHP_EOL;
+        //TODO fstream open to json file
+        //TODO foreach loop for search
         if($Code === "xxx"){
             $description = "Znalazlem opis";
         }else{
             $description= "Nie znaleziono opisu";
         }
         return $Code." - ".$description.PHP_EOL;
-    }
-
-    public function ShowCode(array $output)
-    {
-        // TODO: Implement ShowCode() method.
     }
 
     public function AskToAnotherCode():bool
