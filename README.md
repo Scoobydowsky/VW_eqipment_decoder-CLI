@@ -1,1 +1,1 @@
-# VW_eqipment_decode
+# VW_eqipment_decoder
