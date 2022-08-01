@@ -32,7 +32,7 @@ class ControlerEN implements ControlerInterface
 
     public function SearchAndShowCode(string $Code)
     {
-        echo "CODE - DESCRIPTION" . PHP_EOL;
+        echo "CODE - DESCRIPTION".PHP_EOL;
         $file = file_get_contents('src/CodeListEN.json');
         $codeList = json_decode($file, true);
         $description = 'Code undefined';
@@ -42,19 +42,19 @@ class ControlerEN implements ControlerInterface
                 break;
             }
         }
-        return $Code . " - " . $description . PHP_EOL;
+        return $Code." - ".$description.PHP_EOL;
     }
 
     public function AskToAnotherCode()
     {
-        do {
+        do{
             $question = readline("Do you want search next code ? (y/n)");
-            $check = ($question == "y" || $question == "n") ? $check = 1 : $check = 0;
-        } while ($check == 0);
-        if ($check == 1) {
-            if ($question == "y") {
+            $check = ($question == "y" || $question == "n") ? $check = 1 : $check = 0 ;
+        }while ($check == 0);
+        if($check == 1){
+            if($question == "y"){
                 $returnStatus = true;
-            } else {
+            }else{
                 $returnStatus = false;
             }
         }
