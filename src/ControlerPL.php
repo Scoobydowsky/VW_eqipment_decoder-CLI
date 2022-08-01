@@ -27,7 +27,7 @@ class ControlerPL implements ControlerInterface
 
     public function GetCode(): string
     {
-        return readline("Podaj kod wyposazenia: ");
+        return strtoupper(readline("Podaj kod wyposazenia: "));
     }
 
     public function SearchAndShowCode(string $Code):string

@@ -27,7 +27,7 @@ class ControlerEN implements ControlerInterface
 
     public function GetCode(): string
     {
-        return readline("Write Equipment code: ");
+        return strtoupper(readline("Write Equipment code: "));
     }
 
     public function SearchAndShowCode(string $Code)
