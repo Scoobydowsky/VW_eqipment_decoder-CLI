@@ -34,7 +34,11 @@ class ControlerPL implements ControlerInterface
     public function SearchAndShowCode(string $Code):string
     {
         echo "KOD - OPIS".PHP_EOL;
-        $file = file_get_contents('src/CodeListEN.json');
+        if(file_exists('src/CodeListPL.json')){
+            $file = file_get_contents('src/CodeListPL.json');
+        }else{
+            $file = file_get_contents('src/CodeListEN.json');
+        }
         $codeList = json_decode($file, true);
         $description = 'Nie znaleziono opisu';
         foreach ($codeList as ['code' => $codeOnArray, 'description' => $descriptionOnArray]) {
