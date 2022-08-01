@@ -16,7 +16,7 @@ class ControlerPL implements ControlerInterface
          ┗┓┏┛┗┓┏┓┏┛┏┛┗┛┃┃━┫┗━┫┗┛┃┗┛┃┃━┫┃
           ┗┛  ┗┛┗┛ ┗━━━┻━━┻━━┻━━┻━━┻━━┻┛
         LOGO. PHP_EOL;
-        $author = 'Made by: Tomasz @Scoobydowsky Woytkowiak' . PHP_EOL . "https://github.com/Scoobydowsky" . PHP_EOL;
+        $author = 'Stworzone przez: Tomasz @Scoobydowsky Woytkowiak' . PHP_EOL . "https://github.com/Scoobydowsky" . PHP_EOL;
 
         $translator = <<<TRANSLATOR
         Przetlumaczone przez: Tomasz @Scoobydowsky Woytkowiak
@@ -27,7 +27,7 @@ class ControlerPL implements ControlerInterface
 
     public function GetCode(): string
     {
-        return readline("Podaj Kod wyposazenia: ");
+        return readline("Podaj kod wyposazenia: ");
     }
 
     public function SearchAndShowCode(string $Code):string
