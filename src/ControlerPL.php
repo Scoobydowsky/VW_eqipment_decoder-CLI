@@ -22,7 +22,8 @@ class ControlerPL implements ControlerInterface
         Przetlumaczone przez: Tomasz @Scoobydowsky Woytkowiak
         https://github.com/Scoobydowsky
         TRANSLATOR. PHP_EOL;
-        return $output . $author . $translator;
+        $alert = 'Uwaga baza jest tylko w jezyku angielskim'.PHP_EOL;
+        return $output . $author . $translator.$alert;
     }
 
     public function GetCode(): string
@@ -33,12 +34,14 @@ class ControlerPL implements ControlerInterface
     public function SearchAndShowCode(string $Code):string
     {
         echo "KOD - OPIS".PHP_EOL;
-        //TODO fstream open to json file
-        //TODO foreach loop for search
-        if($Code === "xxx"){
-            $description = "Znalazlem opis";
-        }else{
-            $description= "Nie znaleziono opisu";
+        $file = file_get_contents('src/CodeListEN.json');
+        $codeList = json_decode($file, true);
+        $description = 'Nie znaleziono opisu';
+        foreach ($codeList as ['code' => $codeOnArray, 'description' => $descriptionOnArray]) {
+            if ($codeOnArray === $Code){
+                $description = $descriptionOnArray;
+                break;
+            }
         }
         return $Code." - ".$description.PHP_EOL;
     }
