@@ -17,6 +17,7 @@ class ControlerPL implements ControlerInterface
           ┗┛  ┗┛┗┛ ┗━━━┻━━┻━━┻━━┻━━┻━━┻┛
         LOGO. PHP_EOL;
         $author = 'Made by: Tomasz @Scoobydowsky Woytkowiak' . PHP_EOL . "https://github.com/Scoobydowsky" . PHP_EOL;
+
         $translator = <<<TRANSLATOR
         Przetlumaczone przez: Tomasz @Scoobydowsky Woytkowiak
         https://github.com/Scoobydowsky
