@@ -8,5 +8,7 @@
   {"code":"#B4","description": "Samochod specjalny 4"},
   {"code":"#B5","description": "Samochod specjalny 5"},
   {"code":"#B6","description": "Samochod specjalny 6"},
-  {"code":"#B7","description": "Samochod specjalny 7"}
+  {"code":"#B7","description": "Samochod specjalny 7"},
+  {"code":"#B8","description": "Instalacja ASR z samochodem specjalnego uzytku 1"},
+  {"code":"#B9","description": "Instalacja ASR z samochodem specjalnego uzytku 1"}
 ]
