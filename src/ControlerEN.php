@@ -33,12 +33,14 @@ class ControlerEN implements ControlerInterface
     public function SearchAndShowCode(string $Code)
     {
         echo "CODE - DESCRIPTION".PHP_EOL;
-        //TODO fstream open to json file
-        //TODO foreach loop for search
-        if($Code === "xxx"){
-            $description = "Find Description";
-        }else{
-            $description= "Code undefined";
+        $file = file_get_contents('src/CodeListEN.json');
+        $codeList = json_decode($file, true);
+        $description = 'Code undefined';
+        foreach ($codeList as ['code' => $codeOnArray, 'description' => $descriptionOnArray]) {
+            if ($codeOnArray === $Code){
+                $description = $descriptionOnArray;
+                break;
+            }
         }
         return $Code." - ".$description.PHP_EOL;
     }
